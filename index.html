@@ -81,7 +81,7 @@
 
     <div id="container">
         <div id="ask-state">
-            <h1 id="question">Will you be my Valentine?</h1>
+            <h1 id="question">Will you be my Valentine Priyanka?</h1>
             <div class="gif-container">
                 <img id="main-gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueGZ6bm93ZzRreXpnd3p4ZzRreXpnd3p4ZzRreXpnd3p4ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qUIm5wu6LAAog/giphy.gif" alt="Puppy Eyes">
             </div>
@@ -91,37 +91,37 @@
             </div>
         </div>
 
-        <div id="success-state" class="success-message">
-            <h1>Yay! See you on the 14th! ❤️</h1>
-            <div class="gif-container">
-                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmZ0amR6bmZ0amR6bmZ0amR6bmZ0amR6bmZ0amR6bmZ0amR6JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/108I369un64xWg/giphy.gif" alt="Happy Dance">
-            </div>
-        </div>
+        <div id="success-state" class="success-message" style="display: none;">
+    <h1>Yay! See you on the 14th! ❤️</h1>
+    <div class="gif-container">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2Zic3Vwam9qbGZ6YmRreHk5cXR4Z3gxZ2J0dzA0M3Bicmd4dTJyayZlcD12MV9pbnRlcm5hbV9naWZfYnlfaWQmY3Q9Zy/6901dV1WfEIDvqyXvK/giphy.gif" alt="Happy Dance" style="max-width: 100%; border-radius: 10px;">
     </div>
+        </div>
 
-    <script>
-        const noBtn = document.getElementById('no-btn');
-        const askState = document.getElementById('ask-state');
-        const successState = document.getElementById('success-state');
+<script>
+    const noBtn = document.getElementById('no-btn');
+    const askState = document.getElementById('ask-state');
+    const successState = document.getElementById('success-state');
 
-        // The "Dramatic Disappearing" logic
-        noBtn.addEventListener('mouseover', () => {
-            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
-            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
-            
-            noBtn.style.position = 'absolute';
-            noBtn.style.left = x + 'px';
-            noBtn.style.top = y + 'px';
-        });
+    // Make the No button run away
+    noBtn.addEventListener('mouseover', () => {
+        const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+        const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+        
+        noBtn.style.position = 'absolute';
+        noBtn.style.left = x + 'px';
+        noBtn.style.top = y + 'px';
+    });
 
-        // The Success function
-        function celebrate() {
-            askState.style.display = 'none';
-            successState.style.display = 'block';
-            
-            // Add some confetti effect (optional)
-            document.body.style.backgroundColor = '#ffccd5';
-        }
-    </script>
+    // Success function
+    function celebrate() {
+        // Hide the question, show the dance!
+        askState.style.display = 'none';
+        successState.style.display = 'block';
+        
+        // Soft pink background change
+        document.body.style.backgroundColor = '#ffccd5';
+    }
+</script>
 </body>
 </html>
